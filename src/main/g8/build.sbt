@@ -1,6 +1,6 @@
-val sbtBuild = SbtBuild("your-organization", "your-project", "0.0.1")
+val build = SBuild("your-organization", "your-project", "0.0.1")
   .sourceDirectories("app")
   .testSourceDirectories("app-spec")
-  .testDependencies( scalatest() )
+  .testDependencies( scala_test() )
 
-val yourProject = ( project in file(".") ).settings( sbtBuild.settings )
+val yourProject = ( project in file(".") ).settings( build.settings )
